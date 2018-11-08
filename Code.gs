@@ -14,9 +14,9 @@ function main (){
 }
 
 function collect_data (){
-  ss = SpreadsheetApp.getActive();
+  var ss = SpreadsheetApp.getActive();
   var sheets = ss.getSheets();
-  data = [];
+  var data = [];
   
   sheets.forEach(function(sheet) {
     
