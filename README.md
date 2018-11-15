@@ -1,1 +1,1 @@
-# Send / Receive data in GAS | App Engine endpoint
+# Send / Receive data in Google Apps Script | App Engine endpoint
