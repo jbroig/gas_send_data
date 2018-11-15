@@ -1,1 +1,1 @@
-# gas_send_data
+# Send / Receive data in GAS | App Engine endpoint
