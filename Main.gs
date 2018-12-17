@@ -6,6 +6,7 @@ function onOpen() {
       .addToUi();
 }
 
+
 function collect_data (){
   
   loadSpinner();
@@ -58,9 +59,7 @@ function import_data (){
 }
 
 
-
 function loadSpinner(){
-
 
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var sheet = ss.getActiveSheet();
@@ -72,6 +71,5 @@ function loadSpinner(){
      .setHeight(1);
 
  SpreadsheetApp.getActiveSpreadsheet().show(htmlApp);
-
 }
 
