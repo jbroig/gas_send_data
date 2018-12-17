@@ -40,7 +40,6 @@ function collect_data_autres_elements (){
     var section_ID = sheet.getRange("B" + (index+i) + ":B" + (index+i)).getValue();
     
     if (section_ID.toString() == "Département PGC" || section_ID.toString() == "Pft Yc Restauration" || section_ID.toString() == "EQUIPEMENT ET SERVICES"   ){
-      Logger.log("¿¿¿???: " + section_ID)
       break;
     }
        
@@ -142,8 +141,6 @@ function collect_data_autres_elements (){
 
 function getAllCategoriesIndexes_AutresElements(sheet){
      
-  //var sheet = SpreadsheetApp.getActive().getActiveSheet();
-  //Logger.log("Sheet name: " + sheet.getName())
   categorieCol = sheet.getRange("B1:B").getValues();
   var end = 0;
   const categKey = "RAYONS";
@@ -178,8 +175,7 @@ function collect_n1_data_autres_elements (storeID, departmentID){
   };
   
   var json = JSON.stringify(payload);
-  
-  
+
   var options = {
     "method": "POST",
     'contentType': 'application/json',
