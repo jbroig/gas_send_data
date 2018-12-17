@@ -29,7 +29,6 @@ function collect_data_CEX_commercial (){
   var month;
   var offset = 18;
   
-  
   var turnover, turnoverEvolution, profitability, profitabilityRate, estimatedGrossTurnover, estimatedTurnover, estimatedProfitability, turnoverProjection, profitabilityProjection;
   //Recorre indices
   for (var j in indexes){
@@ -43,14 +42,12 @@ function collect_data_CEX_commercial (){
     for (var i = index; i < (index + 12); i++){
     
       month += 1;
-      
-      
+          
       //TurnoverProjection, turnover, turoverEvolution, EstimatedTurnover
       var turnoverValues = sheet.getRange(i, 5, 1, 13).getValues();
       
       //profitability, profitabilityRate, estimatedProfitability, profitabilityProjection
-      var profitabilityValues = sheet.getRange((i+offset), 5, 1, 4).getValues();
-      
+      var profitabilityValues = sheet.getRange((i+offset), 5, 1, 4).getValues();      
       
       //If the value is not a number, then it will be converted to null
       turnover = turnoverValues[0][2];
@@ -227,10 +224,7 @@ function import_n1_data (){
       
     }
     Logger.log("INDEX: " + index ); 
-    var categoryID = sheet.getRange("C"+(index-4)+":C"+(index-4)).getValue(); //ID SS
-   
-    
-    
+    var categoryID = sheet.getRange("C"+(index-4)+":C"+(index-4)).getValue(); //ID SS   
     var counter = 0;
 
     //months || j < 12 
